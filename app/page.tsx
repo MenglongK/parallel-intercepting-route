@@ -13,48 +13,13 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("parallel");
   return (
     <>
-      <div className="min-h-screen bg-linear-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      <div className="min-h-screen text-white overflow-hidden">
         {/* Animated background circles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-700"></div>
           <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
         </div>
-
-        {/* Navigation */}
-        <nav className="relative z-10 px-8 py-6">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/20">
-                <Code className="w-6 h-6 text-blue-300" />
-              </div>
-              <span className="text-xl font-bold bg-linear-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
-                Next.js Routing
-              </span>
-            </div>
-            <div className="hidden md:flex gap-6">
-              <a
-                href="#docs"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                Docs
-              </a>
-              <a
-                href="#examples"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                Examples
-              </a>
-              <a
-                href="#community"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                Community
-              </a>
-            </div>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
           <div className="text-center mb-16">
@@ -117,7 +82,7 @@ export default function Home() {
           {/* Content Cards */}
           {activeTab === "parallel" && (
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-105 hover:shadow-2xl">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-104 hover:shadow-2xl duration-300">
                 <div className="w-12 h-12 bg-linear-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mb-4">
                   <Layers className="w-6 h-6" />
                 </div>
@@ -138,7 +103,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-105 hover:shadow-2xl">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-104 duration-300 hover:shadow-2xl">
                 <div className="w-12 h-12 bg-linear-to-br from-pink-400 to-orange-500 rounded-xl flex items-center justify-center mb-4">
                   <Sparkles className="w-6 h-6" />
                 </div>
@@ -175,7 +140,7 @@ export default function Home() {
 
           {activeTab === "intercepting" && (
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-105 hover:shadow-2xl">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-104 duration-300 hover:shadow-2xl">
                 <div className="w-12 h-12 bg-linear-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <Sandwich className="w-6 h-6" />
                 </div>
@@ -196,7 +161,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-105 hover:shadow-2xl">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 hover:bg-white/15 transition-all hover:scale-104 duration-300 hover:shadow-2xl">
                 <div className="w-12 h-12 bg-linear-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                   <Sparkles className="w-6 h-6" />
                 </div>
@@ -246,20 +211,20 @@ export default function Home() {
                   </h4>
                   <div className="bg-black/40 backdrop-blur-sm rounded-lg p-4 font-mono text-sm">
                     <pre className="text-green-300">{`export default function Layout({
-  children,
-  team,
-  analytics,
-}) {
-  return (
-    <div>
-      {children}
-      <div className="grid">
-        {team}
-        {analytics}
-      </div>
-    </div>
-  )
-}`}</pre>
+                  children,
+                  team,
+                  analytics,
+                }) {
+                  return (
+                    <div>
+                      {children}
+                      <div className="grid">
+                        {team}
+                        {analytics}
+                      </div>
+                    </div>
+                  )
+                }`}</pre>
                   </div>
                 </div>
 
@@ -286,15 +251,15 @@ export default function Home() {
                   </h4>
                   <div className="bg-black/40 backdrop-blur-sm rounded-lg p-4 font-mono text-sm">
                     <pre className="text-green-300">{`export default function PhotoModal({
-  params
-}) {
-  return (
-    <dialog className="modal">
-      <Photo id={params.id} />
-      <button>Close</button>
-    </dialog>
-  )
-}`}</pre>
+                  params
+                }) {
+                  return (
+                    <dialog className="modal">
+                      <Photo id={params.id} />
+                      <button>Close</button>
+                    </dialog>
+                  )
+                }`}</pre>
                   </div>
                 </div>
 
@@ -319,13 +284,6 @@ export default function Home() {
             )}
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className="relative z-10 max-w-7xl mx-auto px-8 py-12 mt-16 border-t border-white/10">
-          <div className="text-center text-white/50">
-            <p>Built with Next.js App Router • Styled with Tailwind CSS</p>
-          </div>
-        </footer>
       </div>
     </>
   );
