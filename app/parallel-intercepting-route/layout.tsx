@@ -1,18 +1,19 @@
 export default function ParallelLayout({
   children,
-  team,
-  analyze,
+  cardView,
+  naturalDescription,
 }: {
   children: React.ReactNode;
-  team: React.ReactNode;
-  analyze: React.ReactNode;
+  cardView: React.ReactNode;
+  naturalDescription: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
         {children}
-        {team}
-        {analyze}
+        {naturalDescription}
+        {cardView}
+        
       </body>
     </html>
   );

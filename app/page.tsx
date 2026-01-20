@@ -7,6 +7,7 @@ import {
   Sandwich,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -43,13 +44,13 @@ export default function Home() {
             </p>
 
             <div className="flex gap-4 justify-center">
-              <button className="px-8 py-4 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 hover:bg-white/30 transition-all flex items-center gap-2 group">
+              <Link href="/parallel-intercepting-route"><button className="px-8 py-4 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 hover:bg-white/30 transition-all flex items-center gap-2 group cursor-pointer">
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+              </button></Link>
+              <Link href="/parallel-intercepting-route"><button className="px-8 py-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/15 transition-all cursor-pointer">
                 View Examples
-              </button>
+              </button></Link>
             </div>
           </div>
 
