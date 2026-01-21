@@ -1,11 +1,19 @@
+"use client";
 import { cardData } from "@/utils/data/cardData";
 import { MoveDiagonal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams, useRouter } from "next/navigation";
 // import { useRouter } from "next/navigation";
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const post = cardData.find((item) => item.id === parseInt(params.id));
+export default function Page() {
+  const router = useRouter();
+  const params = useParams<{ id: string }>();
+  const post = cardData.find((item) => item.id === Number(params.id));
+  if (!params.id) {
+    return null;
+  }
+
 
   if (!post) {
     return (
@@ -35,7 +43,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           height={200}
         />
         <button
-          onClick={() => window.history.back()}
+          onClick={() => router.back()}
           className="backdrop-blur-md bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full border border-white/20 transition-all duration-300 flex items-center gap-2"
         >
           <svg

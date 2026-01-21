@@ -10,13 +10,11 @@ export default function ParallelLayout({
   modal: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        {naturalDescription}
-        {cardView}
-        {modal}
-      </body>
-    </html>
+    <main>
+      {children}
+      {naturalDescription}
+      {cardView}
+      {modal}
+    </main>
   );
 }

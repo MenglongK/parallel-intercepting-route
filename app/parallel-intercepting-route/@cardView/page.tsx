@@ -20,15 +20,14 @@ export default function page() {
               className="glass rounded-2xl overflow-hidden max-w-sm w-full shadow-2xl transition-all duration-300 hover:scale-104"
             >
               <div className="relative h-48 overflow-hidden cursor-pointer">
-                <Link href={`/imageView/${card.id}`}>
-                  <Image
-                    src={card.imageUrl}
-                    alt={card.title}
-                    className="w-full h-full object-cover"
-                    width={400}
-                    height={200}
-                  />
-                </Link>
+                <Image
+                  src={card.imageUrl}
+                  alt={card.title}
+                  className="w-full h-full object-cover"
+                  width={400}
+                  height={200}
+                />
+
                 <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
               </div>
 
